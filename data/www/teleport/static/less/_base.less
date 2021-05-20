@@ -1,0 +1,318 @@
+@charset "utf-8";
+
+@header-height: 48px;
+@sidebar-width: 180px;
+@text-size-normal: 13px;
+@text-size-small: 12px;
+//@text-size-small: 0.9rem;
+
+//@font-family-normal: "Open Sans", "Helvetica Neue", "Microsoft YaHei", "微软雅黑", Helvetica, Arial, sans-serif;
+//@font-family-normal: "Microsoft YaHei", "微软雅黑", Helvetica, Arial, sans-serif;
+@font-family-normal: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+@font-family-mono: Monaco, Lucida Console, Consolas, Courier, 'Courier New', monospace;
+
+@import "_color";
+
+html {
+  font-size: @text-size-normal;
+}
+
+body {
+  font-family: @font-family-normal;
+  //font-size: @text-size-normal;
+  background-color: @page-bg;
+  color: @page-color;
+}
+
+html, body {
+  height: 100%;
+}
+
+#page-container {
+  min-width: 1260px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+select {
+  outline: none;
+}
+
+label {
+  font-weight: normal;
+}
+
+.clear-float {
+  clear: both;
+}
+
+.bigger {
+  font-size: 120%;
+}
+
+.normal-text {
+  font-size: 13px;
+  color: @page-color;
+}
+
+.mono {
+  font-family: @font-family-mono;
+}
+
+.important {
+  //font-weight:bold;
+  color: #d45f1c;
+  //font-style: italic;
+}
+
+.error {
+  color: @color-text-danger;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+hr.hr-sm {
+  //margin-top: 5px;
+  //margin-bottom: 5px;
+  padding: 1px 0;
+  margin: 5px 0;
+  border-top: 1px dashed #c4c4c4;
+}
+
+ul {
+  list-style: none;
+}
+
+ul.list {
+  //list-style: none;
+  margin: 0;
+  padding: 3px 0 5px 0;
+  li {
+    margin: 3px 3px 5px 10px;
+  }
+}
+
+.btn-single-line {
+  white-space: nowrap;
+  .btn {
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    &:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+}
+
+hr.small {
+  margin: 5px 0;
+}
+
+.dlg-protocol-group {
+  margin-bottom: 3px;
+
+  ul {
+    display: block;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: left;
+      position: relative;
+      display: block;
+      height: 28px;
+      padding: 4px 5px;
+
+      background-color: #eee;
+      border-top: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+
+      &.item-name {
+        width: 120px;
+        //font-size: 90%;
+        //color: #999;
+        //text-align: center;
+        //white-space: nowrap;
+        //overflow: hidden;
+        //text-overflow: ellipsis;
+      }
+
+      &.item-btn {
+        background: none;
+        padding: 0;
+        border: none;
+      }
+
+      &.item-input {
+        background: none;
+        border: none;
+        padding: 0;
+      }
+
+      .form-control {
+        line-height: 1.5;
+        margin: 0;
+        padding: 4px 5px;
+        font-size: 12px;
+        height: 28px;
+        border-radius: 0;
+        border-left: none;
+        width: 100px;
+      }
+
+      label {
+        padding: 0;
+        display: block;
+        float: left;
+        margin-top: 1px;
+        cursor: pointer;
+      }
+      input[type=checkbox] {
+        display: block;
+        float: left;
+        margin: 3px 5px 0 0;
+      }
+      //select {
+      //	margin-top: -3px;
+      //}
+
+      &:first-child {
+        border-left: 1px solid #ccc;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+
+        .btn, .form-control {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+      }
+
+      &:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+
+        .btn, .form-control {
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+//=============================================
+// icons.
+//=============================================
+.os-icon-windows:after {
+  color: #00bcf6;
+  content: "\f17a";
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.os-icon-linux:after {
+  color: #fff;
+  content: "\f17c";
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #333;
+  border-radius: 50%;
+  display: inline-block;
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.os-icon-macos:after {
+  color: #a7a7a7;
+  content: "\f179";
+  font-size: 20px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.os-icon-ubuntu:after, .os-icon-debian:after, .os-icon-centos:after, .os-icon-redhat:after {
+  content: " ";
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+}
+
+.os-icon-ubuntu:after {
+  background: url(../img/os-icon/ubuntu-24x24.png) no-repeat;
+}
+
+.os-icon-debian:after {
+  background: url(../img/os-icon/debian-24x24.png) no-repeat;
+}
+
+.os-icon-centos:after {
+  background: url(../img/os-icon/centos-24x24.png) no-repeat;
+}
+
+.os-icon-redhat:after {
+  background: url(../img/os-icon/redhat-24x24.png) no-repeat;
+}
+
+.disable-bg {
+  position: absolute;
+  background: url(../img/css/disable-bg.png) repeat;
+  opacity: 0.45;
+  z-index: 990;
+}
+
+.disable-message {
+  display: inline-block;
+  //left:50%;
+  //top:50%;
+  font-size: 160%;
+  position: absolute;
+  padding: 20px 40px;
+
+  //border: 3px solid #d4acac;
+  //background-color: #fff;
+  //color: #494949;
+
+  border: 1px solid #2b0002;
+  //border-radius: 3px;
+  background-color: #65181a;
+  color: #fff;
+  opacity: 0.85;
+
+  z-index: 991;
+}
